@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Year Crossword</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6f7ff;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #b30000;
+        }
+        .crossword-grid {
+            display: inline-block;
+            margin: 20px auto;
+            border: 2px solid #333;
+        }
+        .crossword-row {
+            display: flex;
+        }
+        .cell {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 18px;
+            background-color: white;
+            position: relative;
+        }
+        .cell.empty {
+            background-color: #ccc;
+            border: 1px solid #999;
+        }
+        .cell-number {
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            font-size: 10px;
+            color: black;
+        }
+        .clues {
+            max-width: 500px;
+            margin: 20px auto;
+            text-align: left;
+        }
+        .clues h2 {
+            color: #0057b3;
+        }
+        .clue {
+            margin: 6px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>New Year Crossword</h1>
+
+    <div class="crossword-grid" id="grid"></div>
+
+    <div class="clues">
+        <h2>Across:</h2>
+        <div class="clue">1. Evergreen plant decorated during Christmas</div>
+        <div class="clue">4. White flakes that fall from the sky in winter</div>
+
+        <h2>Down:</h2>
+        <div class="clue">1. Present given on New Year or Christmas</div>
+        <div class="clue">2. Another word for Christmas (French origin)</div>
+        <div class="clue">3. Shiny object placed on top of the holiday tree</div>
+    </div>
+
+    <script>
+        const size = 6;
+        let grid = Array(size).fill().map(() => Array(size).fill(''));
+        let numbers = Array(size).fill().map(() => Array(size).fill(null));
+
+        // Words and their placements
+        const words = [
+            { word: "TREE",  row: 0, col: 1, dir: 'h', number: 1 },
+            { word: "SNOW",  row: 3, col: 1, dir: 'h', number: 4 },
+            { word: "GIFT",  row: 0, col: 1, dir: 'v', number: 1 },
+            { word: "NOEL",  row: 0, col: 3, dir: 'v', number: 2 },
+            { word: "STAR",  row: 0, col: 5, dir: 'v', number: 3 }
+        ];
+
+        words.forEach(w => {
+            const { word, row, col, dir, number } = w;
+            if (dir === 'h') {
+                for (let i = 0; i < word.length; i++) {
+                    grid[row][col + i] = word[i];
+                }
+            } else {
+                for (let i = 0; i < word.length; i++) {
+                    grid[row + i][col] = word[i];
+                }
+            }
+            numbers[row][col] = number;
+        });
+
+        const gridEl = document.getElementById('grid');
+        for (let r = 0; r < size; r++) {
+            const rowEl = document.createElement('div');
+            rowEl.className = 'crossword-row';
+            for (let c = 0; c < size; c++) {
+                const cell = document.createElement('div');
+                if (grid[r][c] === '') {
+                    cell.className = 'cell empty';
+                } else {
+                    cell.className = 'cell';
+                    cell.textContent = grid[r][c];
+                    if (numbers[r][c] !== null) {
+                        const numSpan = document.createElement('span');
+                        numSpan.className = 'cell-number';
+                        numSpan.textContent = numbers[r][c];
+                        cell.appendChild(numSpan);
+                    }
+                }
+                rowEl.appendChild(cell);
+            }
+            gridEl.appendChild(rowEl);
+        }
+    </script>
+</body>
+</html>
