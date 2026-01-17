@@ -1,9 +1,15 @@
 
-body{
-	background-color: #d2b48c;
-	margin-left: 20%;
-	margin-right: 20%;
-	border: 2px dotted black;
-	padding: 10px 10px 10px 10px;
-	font-family: sans serif;
-    }
+body {
+  background-color: #e0f0ff !important;
+}
+
+.main-content,
+.page-content,
+.container,
+.wrapper {
+  background-color: white !important;
+  padding: 20px !important;
+  border-radius: 10px !important;
+  max-width: 960px !important;
+  margin: 20px auto !important;
+}
