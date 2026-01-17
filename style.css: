@@ -1,33 +1,26 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <title>Мой блог</title>
-  <style>
-    /* Голубой фон всего сайта */
-    body {
-      background-color: #e0f0ff; /* нежно-голубой */
-      margin: 0;
-      padding: 20px;
-      font-family: Arial, sans-serif;
-      color: #003366; /* тёмно-синий текст — хорошо читается */
-    }
+body {
+    background-color: #ADD8E6; /* Основной голубой цвет */
+    color: #333;               /* Темно-серый цвет текста */
+}
 
-    /* Белый контентный блок по центру */
-    .container {
-      background-color: white;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>Добро пожаловать в мой блог!</h1>
-    <p>Теперь у меня голубой фон на GitHub! 💙</p>
-  </div>
-</body>
-</html>
+a {
+    color: #0000EE;            /* Синий цвет ссылок */
+    text-decoration: none;     /* Убираем подчеркивание ссылок */
+}
+
+a:hover {
+    color: #6A5ACD;            /* Цвет ссылок при наведении мыши */
+}
+
+button,
+input[type="submit"] {
+    background-color: #87CEEB; /* Светло-голубой цвет кнопок */
+    border-radius: 5px;        /* Скругленные углы */
+    padding: 10px 20px;        /* Внутренние отступы */
+    cursor: pointer;           /* Изменение курсора на руку */
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background-color: #00BFFF; /* Насыщенный синий цвет при наведении */
+}
