@@ -1,18 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Мой блог</title>
+  <style>
+    /* Голубой фон всего сайта */
+    body {
+      background-color: #e0f0ff; /* нежно-голубой */
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      color: #003366; /* тёмно-синий текст — хорошо читается */
+    }
 
-// Оранжевый фон всего сайта
-body {
-  background-color: #fff5e6 !important; /* Светло-оранжевый (нежный) */
-}
-
-// Белый контентный блок для читаемости
-.main-content,
-.page-content,
-.container,
-.wrapper {
-  background-color: white !important;
-  padding: 20px !important;
-  border-radius: 10px !important;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
-  max-width: 960px !important;
-  margin: 20px auto !important;
-}
+    /* Белый контентный блок по центру */
+    .container {
+      background-color: white;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Добро пожаловать в мой блог!</h1>
+    <p>Теперь у меня голубой фон на GitHub! 💙</p>
+  </div>
+</body>
+</html>
