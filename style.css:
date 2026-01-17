@@ -1,8 +1,10 @@
 
+// Оранжевый фон всего сайта
 body {
-  background-color: #e0f0ff !important;
+  background-color: #fff5e6 !important; /* Светло-оранжевый (нежный) */
 }
 
+// Белый контентный блок для читаемости
 .main-content,
 .page-content,
 .container,
@@ -10,6 +12,7 @@ body {
   background-color: white !important;
   padding: 20px !important;
   border-radius: 10px !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
   max-width: 960px !important;
   margin: 20px auto !important;
 }
