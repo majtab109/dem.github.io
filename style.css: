@@ -1,26 +1,24 @@
+@font-face {
+  font-family: "Pudelinka";
+  src: url("Fonts/pudelinka.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-    background-color: #ADD8E6; /* Основной голубой цвет */
-    color: #333;               /* Темно-серый цвет текста */
+  background-color: #e6f2ff; /* Нежно-голубой фон */
+  margin-left: 20%;
+  margin-right: 20%;
+  border: 2px dotted black;
+  padding: 10px;
+  font-family: Arial, sans-serif;
 }
 
-a {
-    color: #0000EE;            /* Синий цвет ссылок */
-    text-decoration: none;     /* Убираем подчеркивание ссылок */
+blockquote.q {
+  color: #D4AF37;
+  border-left: 4px solid #8B0000;
+  font-style: italic;
 }
-
-a:hover {
-    color: #6A5ACD;            /* Цвет ссылок при наведении мыши */
-}
-
-button,
-input[type="submit"] {
-    background-color: #87CEEB; /* Светло-голубой цвет кнопок */
-    border-radius: 5px;        /* Скругленные углы */
-    padding: 10px 20px;        /* Внутренние отступы */
-    cursor: pointer;           /* Изменение курсора на руку */
-}
-
-button:hover,
-input[type="submit"]:hover {
-    background-color: #00BFFF; /* Насыщенный синий цвет при наведении */
+p.zz {
+   font-family: "Pudelinka";
 }
